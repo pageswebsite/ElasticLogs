@@ -2,8 +2,8 @@
 
 namespace ElasticLog;
 
-use Elasticsearch\Client;
-use Elasticsearch\ClientBuilder;
+use Elastic\Elasticsearch\Client;
+use Elastic\Elasticsearch\ClientBuilder;
 use ElasticLog\Commands\InstallCommand;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\ServiceProvider;
