@@ -17,7 +17,7 @@ class ElasticServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__.'/../config/elastic-log.php' => config_path('elastic.php'),
+            __DIR__.'/resources/config/elastic-log.php' => config_path('elastic.php'),
         ]);
 
         if ($this->app->runningInConsole()) {
