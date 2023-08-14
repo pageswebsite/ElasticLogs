@@ -1,0 +1,32 @@
+{
+    "name": "softel/elastic_logs",
+    "description": "Integrate laravel with elastic search for sending all logs to elastic search",
+    "keywords": [
+        "laravel",
+        "elasticsearch",
+        "log"
+    ],
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "ElasticLog\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Cuong Dang",
+            "email": "cdang@softel.vn"
+        }
+    ],
+    "require": {
+        "php": ">=7.1",
+        "elasticsearch/elasticsearch": "^8.8"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ElasticLog\\ElasticServiceProvider"
+            ]
+        }
+    }
+}
