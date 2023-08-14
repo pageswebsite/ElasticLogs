@@ -28,5 +28,10 @@
                 "ElasticLog\\ElasticServiceProvider"
             ]
         }
+    },
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
     }
 }
