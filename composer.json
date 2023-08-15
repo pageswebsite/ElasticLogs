@@ -22,16 +22,6 @@
         "php": ">=7.1",
         "elasticsearch/elasticsearch": "^8.8"
     },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "ElasticLog\\ElasticServiceProvider"
-            ],
-            "aliases": {
-                "ElasticLog": "ElasticLog\\ElasticSearchClientFacade"
-            }
-        }
-    },
     "config": {
         "allow-plugins": {
             "php-http/discovery": true
