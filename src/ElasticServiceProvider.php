@@ -5,9 +5,9 @@ namespace ElasticLog;
 use Elastic\Elasticsearch\Client;
 use Elastic\Elasticsearch\ClientBuilder;
 use ElasticLog\Commands\InstallCommand;
-use Illuminate\Support\Facades\App;
 use Illuminate\Support\ServiceProvider;
-use Monolog\Formatter\ElasticsearchFormatter;
+use ElasticLog\Formatter\KibanaFormatter;
+use Illuminate\Support\Facades\App;
 
 class ElasticServiceProvider extends ServiceProvider
 {
@@ -38,10 +38,18 @@ class ElasticServiceProvider extends ServiceProvider
             return ClientBuilder::create()->setHosts([$url])->build();
         });
 
-        $this->app->bind(ElasticsearchFormatter::class, function ($app) {
-            return new ElasticsearchFormatter( $this->getIndexName(), $this->getIndexType() );
+        $this->app->bind(KibanaFormatter::class, function ($app) {
+            return new KibanaFormatter($this->getIndexName(), $this->getIndexType(), $this->getApplicationName());
         });
 
+    }
+
+    /**
+     * @return string
+     */
+    protected function getApplicationName(): string
+    {
+        return env('APP_NAME');
     }
 
     /**
