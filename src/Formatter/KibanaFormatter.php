@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace Elklog\Formatter;
+namespace ElasticLog\Formatter;
 
 use Monolog\Formatter\ElasticsearchFormatter;
 
