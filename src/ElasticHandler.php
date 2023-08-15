@@ -1,8 +1,8 @@
 <?php
 
-namespace Elklog;
+namespace ElasticLog;
 
-use Elasticsearch\Client;
+use Elastic\Elasticsearch\Client;
 use Illuminate\Support\Facades\App;
 use Monolog\Handler\ElasticsearchHandler;
 use Monolog\Logger;
