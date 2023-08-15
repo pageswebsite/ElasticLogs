@@ -26,7 +26,10 @@
         "laravel": {
             "providers": [
                 "ElasticLog\\ElasticServiceProvider"
-            ]
+            ],
+            "aliases": {
+                "ElasticLog": "ElasticLog\\ElasticSearchClientFacade"
+            }
         }
     },
     "config": {
