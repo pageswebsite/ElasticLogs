@@ -33,6 +33,8 @@ return [
 Config in file .env
 
 ```.env
+LOG_CHANNEL=elastic
+...
 
 ELASTIC_HOST="http://elasticsearch-cluster.......internal"
 ELASTIC_API_KEY="xxxxxxxx"
